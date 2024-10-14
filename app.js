@@ -23,8 +23,7 @@ app.use('/api/user', userRoute);
 app.use('/api/department',deptRoutes);
 app.use('/api/course',courseRoutes);
 app.use('/api/student',studentRoutes);
-const PORT = 3000;
-
-app.listen(3000, () => {
-    console.log(`Server is running on port ${PORT}`);
+const port = process.env.PORT || 0;
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
